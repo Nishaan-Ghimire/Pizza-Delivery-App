@@ -1,0 +1,16 @@
+{
+  "name": "pizza-delivery-app",
+  "version": "1.0.0",
+  "description": "Real time pizza delivery App",
+  "main": "index.js",
+  "author": "Nishan",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,25 @@
+[✅] Create directory structure
+[✅] Create NPM project and install all dependancies
+    -dependancies
+        -express
+        - ejs express-ejs-layouts
+    -Dev dependancies   
+        - nodemon
+[✅] Create Express server - Create a server.js file
+[❌] Git setup and first commit
+[❌] Install Laravel Mix
+     - setup js and scss
+[❌] Install tailwind CSS
+[❌] Create Home page using HTML and CSS
+[❌] Create Cart page    
+    -order summary section
+    -empty cart section
+[❌] Create Order controller and link it in server.js
+[❌] Create Orders view with table for customer and admin
+[❌] Create Orders single page with status
+[❌] Create login page with route
+[❌] Create register page with route
+[❌] Build register crud
+        -dependancies express-flash express-session cookie-parser dotenv
+
+     
