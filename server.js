@@ -6,7 +6,10 @@ const path = require('path');
 
 // Initializing express and port
 const app = express();
-const PORT = process.env.PORT || 3300;
+const PORT = process.env.PORT || 3500;
+
+// Assets
+app.use(express.static('public'));
 
 // Routing
 app.get('/',(req,res)=>{

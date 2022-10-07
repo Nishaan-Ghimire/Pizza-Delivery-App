@@ -1,0 +1,30 @@
+                        ------>config(configuration realted to app eg: authentication)
+                        |                                       ----->controllers
+                        |                                       |
+All Backend Logic   app ------>http (All request related files) |
+                        |                                       |
+                        |                                       ----->middleware
+                         ------>models (MVC pattern model view controller)
+
+
+dist ----> app.js
+
+
+                                   ----->css
+All files that are served          |                           
+to client side compiled     public ---->img  
+code                               |
+                                   ----->js
+
+
+                            ----->scss
+                            |  
+uncompiled files  resources ---->views
+like scss and js            |
+                            ----->js
+
+
+
+        ---->api.js (all api related routes)
+routes |
+        ---->web.js (all web related routes)
