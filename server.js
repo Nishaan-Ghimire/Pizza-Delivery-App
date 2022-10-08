@@ -11,17 +11,31 @@ const PORT = process.env.PORT || 3500;
 // Assets
 app.use(express.static('public'));
 
-// Routing
-app.get('/',(req,res)=>{
-res.render('home');
-});
-
 
 // set Template Engine
 app.use(expressLayout);
 app.set('views',path.join(__dirname,'/resources/views'));
 app.set('view engine','ejs');
 
+
+// Routing
+    app.get('/',(req,res)=>{
+    res.render('home');
+    });
+    
+    app.get('/cart',(req,res)=>{
+        res.render('customer/cart');
+    })
+
+    app.get('/login',(req,res)=>{
+        res.render('auth/login');
+    })
+
+    app.get('/register',(req,res)=>{
+        res.render('auth/register');
+    })
+    
+    
 // Listing
 app.listen(PORT,()=>{
     console.log(`Listening on port http://localhost:${PORT}`);
