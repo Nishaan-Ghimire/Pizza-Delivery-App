@@ -11,9 +11,20 @@
      - setup js and scss
 [✅] Install tailwind CSS
 [✅] Create Home page using HTML and CSS
-[❌] Create Cart page    
+[✅] Create Cart page    
     -order summary section
     -empty cart section
+[✅] Create login and register page Using HTML and CSS
+[✅] Move routes to routes files  
+[✅] Create dedicated controller
+[✅] Add to cart functionality
+        -Fetch all pizzas from db and show on home page
+        -connect to mongo db
+        -use connect-mongo for session store
+            -dependancies
+                -mongoose, express-session, connect-mongo, dotenv
+            -axios to send ajax request
+            -install notification library npm i noty https://ned.im/noty/#/    
 [❌] Create Order controller and link it in server.js
 [❌] Create Orders view with table for customer and admin
 [❌] Create Orders single page with status
