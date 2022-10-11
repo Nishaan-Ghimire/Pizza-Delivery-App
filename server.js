@@ -5,10 +5,11 @@ const ejs = require('ejs');
 const expressLayout = require('express-ejs-layouts');  //Setting up ejs layouts
 const path = require('path');
 const mongoose = require('mongoose'); //Connect to mongodb
-const session = require('express-session'); // For using session
-const flash = require('express-flash');  // Create an unique session for each every client
-const MongoDbStore = require('connect-mongo');  //use for storing session in database
 
+const flash = require('express-flash');  // Create an unique session for each every client
+const passport = require('passport');
+const session = require('express-session'); // For using session
+const MongoDbStore = require('connect-mongo');  //use for storing session in database
 
 
 // Initializing express and port
@@ -29,6 +30,13 @@ useUnifiedTopology: true
 if(err) throw err;
 console.log('Connected to MongoDB!!!')
 });
+
+
+
+
+
+
+
 
 // Session Store
 
@@ -51,17 +59,31 @@ app.use(session({
     cookie: {maxAge: 1000*60*60*24}
 }))
 
+
+
+// Passport config
+const passportInit = require('./app/config/passport');
+passportInit(passport);
+app.use(passport.session());
+app.use(passport.initialize());
+
+
 //Initializing express-flash for generating session Id
 app.use(flash());
 
 // Assets
 app.use(express.static('public'));
+
+// Type of data received in register
+app.use(express.urlencoded({extended: false}));
+// Type of data received in add to cart
 app.use(express.json());
 
 
 // Global middleware
 app.use((req,res,next)=>{
         res.locals.session = req.session;
+        res.locals.user = req.user;
         next();
 }
 )

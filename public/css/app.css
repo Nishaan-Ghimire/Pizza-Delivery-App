@@ -281,11 +281,11 @@ section.hero {
   outline: none;
 }
 
-.btn-primary {
+.btn-primary[type=submit], [type=button], [type=reset] {
   background: #FE5F1E;
   transition: all 0.3s ease-in-out;
 }
-.btn-primary:hover {
+.btn-primary[type=submit]:hover, [type=button]:hover, [type=reset]:hover {
   background: #b23301;
 }
 

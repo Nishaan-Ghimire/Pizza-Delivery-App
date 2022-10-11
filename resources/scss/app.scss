@@ -45,7 +45,7 @@ section.hero{
     }
 }
 
-.btn-primary{
+.btn-primary[type=submit],[type=button],[type=reset]{
     background: $primary;
     transition: $smooth;
     &:hover{
