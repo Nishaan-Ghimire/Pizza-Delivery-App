@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Noty from 'noty';
-
+const initializeAdmin = require('./admin');
 
 let addToCart = document.querySelectorAll('.add-to-cart');
 let cartCounter = document.getElementById('cartCounter');
@@ -36,3 +36,12 @@ addToCart.forEach((btn)=>{
         updateCart(pizza);
     })
 })
+
+const alertMsg = document.querySelector('#success-alert');
+if(alertMsg){
+    setTimeout(()=>{
+        alertMsg.remove();
+    },2000);
+}
+console.log("ran");
+initializeAdmin();

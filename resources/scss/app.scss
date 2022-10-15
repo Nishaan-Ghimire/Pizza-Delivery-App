@@ -45,7 +45,7 @@ section.hero{
     }
 }
 
-.btn-primary[type=submit],[type=button],[type=reset]{
+.btn-primary,.btn-primary[type=submit],[type=reset],[type=button]{
     background: $primary;
     transition: $smooth;
     &:hover{
@@ -73,4 +73,7 @@ section.login{
 .noty_theme__mint {
     border-radius: 50px !important;
     padding-left: 8px !important;
+}
+a.link{
+    color: $primary;
 }

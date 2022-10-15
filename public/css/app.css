@@ -281,11 +281,11 @@ section.hero {
   outline: none;
 }
 
-.btn-primary[type=submit], [type=button], [type=reset] {
+.btn-primary, .btn-primary[type=submit], [type=reset], [type=button] {
   background: #FE5F1E;
   transition: all 0.3s ease-in-out;
 }
-.btn-primary[type=submit]:hover, [type=button]:hover, [type=reset]:hover {
+.btn-primary:hover, .btn-primary[type=submit]:hover, [type=reset]:hover, [type=button]:hover {
   background: #b23301;
 }
 
@@ -310,4 +310,8 @@ section.login a:hover {
 .noty_theme__mint {
   border-radius: 50px !important;
   padding-left: 8px !important;
+}
+
+a.link {
+  color: #FE5F1E;
 }

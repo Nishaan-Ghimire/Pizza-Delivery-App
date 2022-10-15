@@ -24,7 +24,12 @@
             -dependancies
                 -mongoose, express-session, connect-mongo, dotenv
             -axios to send ajax request
-            -install notification library npm i noty https://ned.im/noty/#/    
+            -install notification library npm i noty https://ned.im/noty/#/  
+[✅] Build register crud
+     -dependancies express-flash express-session dotenv
+     -status code article https://www.restapitutorial.commit
+[✅] Build login using passport
+     -install dependancies passport passport-local express-session           
 [❌] Create Order controller and link it in server.js
 [❌] Create Orders view with table for customer and admin
 [❌] Create Orders single page with status
