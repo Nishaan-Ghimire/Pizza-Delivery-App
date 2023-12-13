@@ -10,7 +10,7 @@ const flash = require('express-flash');  // Create an unique session for each ev
 const passport = require('passport');
 const session = require('express-session'); // For using session
 const MongoDbStore = require('connect-mongo');  //use for storing session in database
-
+const Emitter = require('events');
 
 // Initializing express and port
 const app = express();
@@ -44,6 +44,11 @@ let mongoStore = MongoDbStore.create({
     mongoUrl : URI,
     collection: "sessions"
 });
+
+
+// Event emitter
+const eventEmitter = new Emitter();
+app.set('eventEmitter',eventEmitter);
 
 
 
@@ -101,6 +106,41 @@ require('./routes/web')(app);
     
     
 // Listing
-app.listen(PORT,()=>{
+const server = app.listen(PORT,()=>{
     console.log(`Listening on port http://localhost:${PORT}`);
+})
+
+
+
+// Socket
+
+// const io = require('socket.io')(server);
+
+const io = require("socket.io")(server, {
+    cors: {
+        origin: "http://localhost:4200",
+        methods: ["GET", "POST"]
+    }
+})
+
+
+
+io.on('connection',(socket)=>{
+    // Join
+    console.log(socket.id)
+socket.on('join',(orderId)=>{
+    socket.join(orderId);
+})
+
+})
+
+eventEmitter.on('orderUpdated',(data)=>{
+    io.to(`order_${data.id}`).emit('orderUpdated',data);
+})
+
+
+eventEmitter.on('orderPlaced',(data)=>{
+    io.to('adminRoom').emit('orderPlaced',data)
+    console.log('fine here nishan');
+    console.log(data)
 })

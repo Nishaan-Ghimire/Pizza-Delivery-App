@@ -30,12 +30,15 @@
      -status code article https://www.restapitutorial.commit
 [✅] Build login using passport
      -install dependancies passport passport-local express-session           
-[❌] Create Order controller and link it in server.js
-[❌] Create Orders view with table for customer and admin
+[✅] Create Order controller and link it in server.js
+[✅] Create Orders view with table for customer and admin
 [❌] Create Orders single page with status
-[❌] Create login page with route
-[❌] Create register page with route
-[❌] Build register crud
+[✅] Create login page with route
+[✅] Create register page with route
+[✅] Build register crud
         -dependancies express-flash express-session cookie-parser dotenv
-
+[❌] Order tracker
+[❌] Socket connection
+    -dependancies socket.io
+[❌] Build project for deployment    
      
