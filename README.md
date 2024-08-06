@@ -64,13 +64,13 @@ Make sure you have the following installed:
 ```bash
 git clone https://github.com/Nishaan-Ghimire/Pizza-Delivery-App.git
 cd Pizza-Delivery-App
-Install Dependencies
-bash
-Copy code
 npm install
-Environment Variables
-### Create a .env file in the root directory and add the following environment variables:
+
 ```
+
+### Environment Variables
+ Create a .env file in the root directory and add the following environment variables:
+
 ```bash
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
