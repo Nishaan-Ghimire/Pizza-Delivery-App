@@ -22,19 +22,7 @@ Make sure you have the following installed:
 - [Node.js](https://nodejs.org/)
 - [MongoDB](https://www.mongodb.com/)
 
-### Clone the Repository
 
-```bash
-git clone https://github.com/Nishaan-Ghimire/Pizza-Delivery-App.git
-cd Pizza-Delivery-App
-npm install
-```
-
-Memory updated
-Sure thing, dude! Here's a README file for your Pizza-Delivery-App:
-
-markdown
-Copy code
 # Pizza-Delivery-App
 
 Welcome to the Pizza-Delivery-App! This project is a web application for ordering delicious pizzas online. It is built using Node.js, Express.js, MongoDB, and EJS for templating.
